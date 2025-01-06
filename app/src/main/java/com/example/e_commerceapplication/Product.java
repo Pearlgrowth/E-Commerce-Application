@@ -2,11 +2,11 @@ package com.example.e_commerceapplication;
 
 public class Product {
     private String productName;
-    private String productImage;
+    private int productImage;
     private double productPrice;
       // Use an int for the drawable resource ID
 
-    public Product(String productName, double productPrice, String productImage) {
+    public Product(String productName, double productPrice, int productImage) {
         this.productName = productName;
         this.productImage = productImage;
         this.productPrice = productPrice;
@@ -15,7 +15,7 @@ public class Product {
     public String getProductName() {
         return productName;
     }
-    public String getProductImage() {
+    public int getProductImage() {
         return productImage;
     }
 

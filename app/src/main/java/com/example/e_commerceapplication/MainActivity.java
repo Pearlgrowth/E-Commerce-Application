@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         productList = new ArrayList<>();
 
         // Add products to the list
-        productList.add(new Product("Basic White T-Shirt", 15.99, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfNfZZEGBjBZGE8U4p4l5ihBgJr0i2IowPMQ&s"));
-        productList.add(new Product("Slim Fit Denim Jeans", 39.99, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5_quQCboPa2y-PMIA6j4M66ZbzggjOj-3Aw&s"));
+        productList.add(new Product("Basic White T-Shirt", 15.99, R.drawable.white));
+        productList.add(new Product("Slim Fit Denim Jeans", 39.99, R.drawable.jeans));
 
         // Initialize the adapter and set it to the RecyclerView
         featuredProductsAdapter = new FeaturedProductsAdapter(productList);
