@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         productList.add(new Product("Basic White T-Shirt", 15.99, "https://example.com/white_tshirt.jpg"));
         productList.add(new Product("Slim Fit Denim Jeans", 39.99, "https://example.com/slim_fit_jeans.jpg"));
         productList.add(new Product("Leather Bomber Jacket", 129.99, "https://example.com/leather_bomber_jacket.jpg"));
-        productList.add(new Product("Nike Air Force 1", 89.99, "https://example.com/nike_airforce1.jpg"));
 
         // Initialize the adapter and set it to the RecyclerView
         featuredProductsAdapter = new FeaturedProductsAdapter(productList);
