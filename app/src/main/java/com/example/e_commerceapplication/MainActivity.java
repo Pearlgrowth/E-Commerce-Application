@@ -1,8 +1,10 @@
 package com.example.e_commerceapplication;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Init button
         Button viewProductsButton = findViewById(R.id.viewProductsButton);
+        ImageView personIcon = findViewById(R.id.personIcon);
         // Initialize the RecyclerView
         featuredProductsRecyclerView = findViewById(R.id.featuredProductsRecyclerView);
         featuredProductsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -46,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle button click action here (e.g., go to Product List screen)
+            }
+        });
+
+        personIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to LoginActivity
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }
