@@ -1,5 +1,6 @@
 package com.example.e_commerceapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
-
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView featuredProductsRecyclerView;
@@ -21,8 +20,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Init button
+        // Initialize button for checkout
+        Button btnCheckout = findViewById(R.id.btnCheckout);
+        btnCheckout.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CheckoutActivity.class);
+            startActivity(intent);
+        });
+
+        // Initialize button to view products (assuming you want to implement this)
         Button viewProductsButton = findViewById(R.id.viewProductsButton);
+        viewProductsButton.setOnClickListener(v -> {
+            // Handle button click action here (e.g., go to Product List screen)
+        });
+
         // Initialize the RecyclerView
         featuredProductsRecyclerView = findViewById(R.id.featuredProductsRecyclerView);
         featuredProductsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -37,16 +47,5 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the adapter and set it to the RecyclerView
         featuredProductsAdapter = new FeaturedProductsAdapter(productList);
         featuredProductsRecyclerView.setAdapter(featuredProductsAdapter);
-
-
-
-
-        // Set up the button click listener
-        viewProductsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle button click action here (e.g., go to Product List screen)
-            }
-        });
     }
 }

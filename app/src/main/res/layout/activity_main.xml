@@ -91,6 +91,12 @@
             android:layout_height="wrap_content"
             android:text="@string/profile"
             android:textSize="16sp"/>
+        <Button
+            android:id="@+id/btnCheckout"
+            android:text="Go to Cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
