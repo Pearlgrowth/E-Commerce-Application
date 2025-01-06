@@ -21,9 +21,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".CheckoutActivity" />
         <activity android:name=".PaymentActivity" />
 
+=======
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
+>>>>>>> 1deabb34be731e0e2e9af9623a840ff46281b654
     </application>
 
 </manifest>
