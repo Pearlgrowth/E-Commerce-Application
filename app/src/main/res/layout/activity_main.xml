@@ -101,17 +101,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/profile"
-<<<<<<< HEAD
+
             android:textSize="16sp"/>
         <Button
             android:id="@+id/btnCheckout"
             android:text="Go to Cart"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-=======
+            android:layout_height="wrap_content"
             android:textSize="16sp" />
->>>>>>> 1deabb34be731e0e2e9af9623a840ff46281b654
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
