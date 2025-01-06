@@ -4,4 +4,6 @@
     <string name="cart">Cart</string>
     <string name="featured_products"> Featured Products</string>
     <string name="profile">Profile</string>
+    <string name="product_image">Product Image</string>
+    <string name="product_name">Product name</string>
 </resources>

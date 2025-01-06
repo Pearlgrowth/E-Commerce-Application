@@ -35,7 +35,10 @@ public class FeaturedProductsAdapter extends RecyclerView.Adapter<FeaturedProduc
         holder.productPrice.setText("$" + currentProduct.getProductPrice());
 
         // Load the product image using Picasso
-        Picasso.get().load(currentProduct.getProductImage()).into(holder.productImage);
+        //Picasso.get().load(currentProduct.getProductImage()).into(holder.productImage);
+
+        // Load image using drawables
+        holder.productImage.setImageResource(currentProduct.getProductImage());
     }
 
     @Override
