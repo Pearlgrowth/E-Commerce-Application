@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize button
+        // Init button
         Button viewProductsButton = findViewById(R.id.viewProductsButton);
         // Initialize the RecyclerView
         featuredProductsRecyclerView = findViewById(R.id.featuredProductsRecyclerView);
