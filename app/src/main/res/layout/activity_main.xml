@@ -18,30 +18,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp" />
     <!-- App Title -->
+
+    <!-- Button to View Products (placed below the title) -->
     <TextView
         android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="76dp"
         android:text="@string/app_name"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Button to View Products (placed below the title) -->
+    <!-- Featured Products Title -->
     <Button
         android:id="@+id/viewProductsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:text="@string/view_products"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appTitle" />
-    <!-- Featured Products Title -->
+
     <TextView
         android:id="@+id/featuredProductsTitle"
         android:layout_width="wrap_content"
