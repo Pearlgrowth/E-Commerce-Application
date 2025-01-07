@@ -32,7 +32,16 @@
         <activity
             android:name=".SignupActivity"
             android:exported="true" />
->>>>>>> 1deabb34be731e0e2e9af9623a840ff46281b654
+
+        <activity android:name=".ProductListActivity"
+            android:label="Product List"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        >>>>>>> 1deabb34be731e0e2e9af9623a840ff46281b654
     </application>
 
 </manifest>

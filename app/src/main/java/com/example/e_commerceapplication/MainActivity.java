@@ -2,15 +2,14 @@ package com.example.e_commerceapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.ArrayList;
-import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView featuredProductsRecyclerView;
@@ -29,17 +28,23 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Initialize button to view products (assuming you want to implement this)
+        // Initialize button to view products
         Button viewProductsButton = findViewById(R.id.viewProductsButton);
-<<<<<<< HEAD
         viewProductsButton.setOnClickListener(v -> {
-            // Handle button click action here (e.g., go to Product List screen)
+            // Navigate to Product List screen
+            Intent intent = new Intent(MainActivity.this, ProductListActivity.class);
+            startActivity(intent);
         });
 
-=======
+        // Initialize person icon for login
         ImageView personIcon = findViewById(R.id.personIcon);
->>>>>>> 1deabb34be731e0e2e9af9623a840ff46281b654
-        // Initialize the RecyclerView
+        personIcon.setOnClickListener(v -> {
+            // Navigate to LoginActivity
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
+
+        // Initialize the RecyclerView for featured products
         featuredProductsRecyclerView = findViewById(R.id.featuredProductsRecyclerView);
         featuredProductsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -53,28 +58,5 @@ public class MainActivity extends AppCompatActivity {
         // Initialize the adapter and set it to the RecyclerView
         featuredProductsAdapter = new FeaturedProductsAdapter(productList);
         featuredProductsRecyclerView.setAdapter(featuredProductsAdapter);
-<<<<<<< HEAD
-=======
-
-
-
-
-        // Set up the button click listener
-        viewProductsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle button click action here (e.g., go to Product List screen)
-            }
-        });
-
-        personIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navigate to LoginActivity
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
->>>>>>> 1deabb34be731e0e2e9af9623a840ff46281b654
     }
 }
