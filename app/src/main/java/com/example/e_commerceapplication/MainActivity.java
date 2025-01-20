@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.ArrayList;
-import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView featuredProductsRecyclerView;
@@ -27,13 +28,23 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Initialize button to view products (assuming you want to implement this)
+        // Initialize button to view products
         Button viewProductsButton = findViewById(R.id.viewProductsButton);
         viewProductsButton.setOnClickListener(v -> {
-            // Handle button click action here (e.g., go to Product List screen)
+            // Navigate to Product List screen
+            Intent intent = new Intent(MainActivity.this, ProductListActivity.class);
+            startActivity(intent);
         });
 
-        // Initialize the RecyclerView
+        // Initialize person icon for login
+        ImageView personIcon = findViewById(R.id.personIcon);
+        personIcon.setOnClickListener(v -> {
+            // Navigate to LoginActivity
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
+
+        // Initialize the RecyclerView for featured products
         featuredProductsRecyclerView = findViewById(R.id.featuredProductsRecyclerView);
         featuredProductsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
